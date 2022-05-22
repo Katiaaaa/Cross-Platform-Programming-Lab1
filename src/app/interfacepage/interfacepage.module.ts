@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FilePageRoutingModule } from './file-routing.module';
+import { InterfacepagePageRoutingModule } from './interfacepage-routing.module';
 
-import { FilePage } from './file.page';
+import { InterfacepagePage } from './interfacepage.page';
 import { MyHeaderComponent } from '../my-header/my-header.component';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { MyHeaderComponent } from '../my-header/my-header.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    FilePageRoutingModule
+    InterfacepagePageRoutingModule,
   ],
-  declarations: [FilePage, MyHeaderComponent]
+  declarations: [InterfacepagePage, MyHeaderComponent],
 })
-export class FilePageModule {}
+export class InterfacepagePageModule {}
