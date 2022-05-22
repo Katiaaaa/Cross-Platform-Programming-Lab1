@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Laboratorna robota 3
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Kateryna Valko</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Laboratorni roboty
+    </ion-title>
+  </ion-toolbar> 
+</ion-header>
+<ion-content>
+  <ion-card>
+<ion-card-content>
+  <ion-text>Читання даних з JSON файлу</ion-text>
+  <ion-item>
+    <ion-label position="floating">Факультет</ion-label>
+    <ion-input type="string" id="faculty" #InputFaculty></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="searchDean(InputFaculty.value)">
+    Виділити факультет
+  </ion-button>
+  <ion-button expand="block" (click)="load()">Завантажити</ion-button>
+  <ion-item>
+    <ion-list>
+      <ion-item *ngFor="let item of data; index as i">
+        <ion-label>
+          <p [ngStyle]="{color: getColor(item.name_faculty)}">
+            <span>Факультет: </span>
+            {{item.name_faculty}}
+            <span>, Декан: </span>
+            {{item.dean_name}}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-item>
+</ion-card-content>
+</ion-card>
+</ion-content>
