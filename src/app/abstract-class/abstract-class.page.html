@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Laboratorna robota 4
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Kateryna Valko</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Laboratorni roboty
+    </ion-title>
+  </ion-toolbar> 
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Завдання</ion-card-title>
+      <p>
+        Скласти програму з абстрактним батьківським класом і двома об'єктами -
+        нащадками. Реалізувати циклічне виведення параметрів об'єктів,
+        використовуючи поліморфний контейнер - масив об'єктів базового класу.
+        Реалізувати метод знаходження висоти будівлі та визначення типу
+        будівлі з найбільшою висотою.
+      </p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-input type="number" value="5" #Inputn></ion-input>
+      <ion-button (click)="ras(Inputn.value)">Розрахунок</ion-button>
+      <p
+        *ngFor="let b of buildings"
+        [ngStyle]="{color:getColor(b.heightt)}"
+      >
+        {{b.show()}}
+      </p>
+    </ion-card-content>
+</ion-card>
+</ion-content>
+
