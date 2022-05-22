@@ -87,3 +87,4 @@ export class Plant extends Building {
     this.heightt = this.numberOfFloors * 0.000002;
   }
 }
+
